@@ -16,6 +16,9 @@
 ;; 让 chinese-fonts-setup 随着 emacs 自动生效。
 ;;(chinese-fonts-setup-enable)
 
+;;disable indent-guide-mode
+(remove-hook 'prog-mode-hook 'indent-guide-mode)
+
 ;;show line number
 (require 'linum)
 (global-linum-mode t)
