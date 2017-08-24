@@ -49,7 +49,13 @@
 ;;(setq vc-handled-backends ())
 
 (require 'wdq-init-input-method)
+
+;;
 (require 'wdq-init-clipboard)
+
+;;disable mouse
+;; (require 'disable-mouse)
+;; (global-disable-mouse-mode)
 
 ;;;provide init-local
 (provide 'init-local)
