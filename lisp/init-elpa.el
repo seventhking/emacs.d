@@ -41,7 +41,7 @@
 ;;; china, special
 (add-to-list 'package-archives '("gnu" . "http://elpa.emacs-china.org/gnu/"))
 (add-to-list 'package-archives '("melpa" . "http://elpa.emacs-china.org/melpa/"))
-(add-to-list 'package-archives '("org" . "	http://elpa.emacs-china.org/org/"))
+(add-to-list 'package-archives '("org" . "http://elpa.emacs-china.org/org/"))
 
 (unless sanityinc/no-ssl
   ;; Force SSL for GNU ELPA
