@@ -48,7 +48,7 @@
 (require 'wdq-init-srefactor)
 ;;(setq vc-handled-backends ())
 
-(require 'wdq-init-input-method)
+;;(require 'wdq-init-input-method)
 
 ;;
 (require 'wdq-init-clipboard)
