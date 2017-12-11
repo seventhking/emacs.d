@@ -43,9 +43,12 @@
 (semantic-add-system-include "~/source-code/linux-4.5.3")
 (semantic-add-system-include "~/mylib/c-include")
 
-(require 'wdq-init-company)
-(require 'wdq-init-ggtags)
 (require 'wdq-init-srefactor)
+
+(require 'wdq-init-company)
+(require 'wdq-init-gtags)
+(require 'wdq-init-ctags)
+(require 'wdq-init-cc-mode)
 ;;(setq vc-handled-backends ())
 
 ;;(require 'wdq-init-input-method)
