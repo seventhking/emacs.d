@@ -48,7 +48,7 @@
 (require 'wdq-init-company)
 (require 'wdq-init-gtags)
 (require 'wdq-init-ctags)
-(require 'wdq-init-cc-mode)
+;;(require 'wdq-init-cc-mode)
 ;;(setq vc-handled-backends ())
 
 ;;(require 'wdq-init-input-method)
