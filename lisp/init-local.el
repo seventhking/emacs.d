@@ -37,11 +37,11 @@
 (require 'google-c-style)
 (add-hook 'c-mode-common-hook 'google-set-c-style)
 
-(require 'semantic)
-(semantic-add-system-include "/usr/local/include")
-(semantic-add-system-include "/usr/include/c++/4.8.2")
-(semantic-add-system-include "~/source-code/linux-4.5.3")
-(semantic-add-system-include "~/mylib/c-include")
+;; (require 'semantic)
+;; (semantic-add-system-include "/usr/local/include")
+;; (semantic-add-system-include "/usr/include/c++/4.8.2")
+;; (semantic-add-system-include "~/source-code/linux-4.5.3")
+;; (semantic-add-system-include "~/mylib/c-include")
 
 (require 'wdq-init-srefactor)
 

@@ -24,9 +24,14 @@
 (add-to-list 'company-c-headers-path-system '"~/mylib/cpp-include")
 
 ;;company-clang
+;; (after-load 'company
+;;   (add-hook 'c-mode-common-hook
+;;             (lambda () (sanityinc/local-push-company-backend #'company-clang))))
+
+;;company-irony
 (after-load 'company
   (add-hook 'c-mode-common-hook
-            (lambda () (sanityinc/local-push-company-backend #'company-clang))))
+            (lambda () (sanityinc/local-push-company-backend #'company-irony))))
 
 ;;(setq company-backends (delete 'company-semantic company-backends))
 
