@@ -51,3 +51,4 @@ site-lisp/package/
 semanticdb/
 srecode-map.el
 /plantuml.jar
+company-statistics-cache.el
