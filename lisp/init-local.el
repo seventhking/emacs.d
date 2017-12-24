@@ -56,6 +56,8 @@
 ;;
 (require 'wdq-init-clipboard)
 
+(require 'wdq-init-irony)
+
 ;;disable mouse
 ;; (require 'disable-mouse)
 ;; (global-disable-mouse-mode)
