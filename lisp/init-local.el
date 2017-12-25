@@ -61,6 +61,9 @@
 ;;open .h file with c++ mode
 (add-to-list 'auto-mode-alist '("\\.h\\'" . c++-mode))
 
+(eval-after-load 'flycheck
+  '(add-hook 'flycheck-mode-hook #'flycheck-irony-setup))
+
 ;; (add-hook 'c++-mode-hook (lambda () (setq flycheck-clang-language-standard "c++11")))
 ;;disable mouse
 ;; (require 'disable-mouse)
