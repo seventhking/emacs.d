@@ -1,4 +1,5 @@
 ;;; [wdq config]
+(require-package 'counsel-gtags)
 
 (add-hook 'c-mode-hook 'counsel-gtags-mode)
 (add-hook 'c++-mode-hook 'counsel-gtags-mode)

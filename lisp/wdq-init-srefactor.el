@@ -1,3 +1,5 @@
+(require-package 'srefactor)
+
 (require 'srefactor)
 (require 'srefactor-lisp)
 
