@@ -9,9 +9,9 @@
 ;;company-lua
 (after-load 'company
   (add-hook 'lua-mode-hook
-            (lambda () (sanityinc/local-push-company-backend #'company-lua)))
-  (add-hook 'lua-mode-hook
-            (lambda () (sanityinc/local-push-company-backend #'company-gtags))))
+            (lambda () (sanityinc/local-push-company-backend #'(company-lua
+                                                           company-etags
+                                                           company-dabbrev-code)))))
 
 
 ;;company-c-headers
