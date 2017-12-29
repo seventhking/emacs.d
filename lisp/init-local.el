@@ -12,6 +12,8 @@
 (require 'wdq-init-ctags)
 (require 'wdq-init-counsel-gtags)
 (require 'wdq-init-clipboard)
+(require 'wdq-init-cmake-mode)
+
 (require 'wdq-init-srefactor)
 
 ;; ;;set MELPA to repository list
