@@ -14,8 +14,6 @@
 (require 'wdq-init-clipboard)
 (require 'wdq-init-cmake-mode)
 
-(require 'wdq-init-srefactor)
-
 ;; ;;set MELPA to repository list
 ;; (setq package-archives '(("org" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/org/")
 ;;                          ("popkit" . "https://elpa.popkit.org/packages/")
