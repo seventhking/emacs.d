@@ -15,4 +15,6 @@
 ;;               company-dabbrev-other-buffers 'all
 ;;               company-tooltip-align-annotations t))
 
+(define-coding-system-alias 'UTF-8 'utf-8)
+
 (provide 'wdq-init-common)
