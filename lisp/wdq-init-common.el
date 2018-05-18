@@ -16,5 +16,6 @@
 ;;               company-tooltip-align-annotations t))
 
 (define-coding-system-alias 'UTF-8 'utf-8)
+(setq debug-on-error nil)
 
 (provide 'wdq-init-common)
