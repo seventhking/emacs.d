@@ -29,7 +29,7 @@
             (lambda () (sanityinc/local-push-company-backend #'company-irony))))
 
 (require 'company-c-headers)
-(add-to-list 'company-c-headers-path-system '"/usr/include/c++/4.8.2/")
+(add-to-list 'company-c-headers-path-system '"/usr/include/c++/7.2.0")
 (add-to-list 'company-c-headers-path-system '"~/mylib/c-include")
 (add-to-list 'company-c-headers-path-system '"~/mylib/cpp-include")
 
