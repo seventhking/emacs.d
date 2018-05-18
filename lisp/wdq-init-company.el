@@ -3,10 +3,11 @@
 ;;anaconda-mode
 ;; (add-hook 'python-mode-hook 'anaconda-mode)
 (require-package 'company-anaconda)
-
 (after-load 'company
   (add-hook 'python-mode-hook
-            (lambda () (sanityinc/local-push-company-backend #'company-anaconda))))
+            (lambda () (sanityinc/local-push-company-backend #'(company-anaconda
+                                                           company-etags
+                                                           company-dabbrev-code)))))
 
 ;;company-lua
 (require-package 'company-lua)
@@ -29,7 +30,7 @@
             (lambda () (sanityinc/local-push-company-backend #'company-irony))))
 
 (require 'company-c-headers)
-(add-to-list 'company-c-headers-path-system '"/usr/include/c++/4.8.2/")
+(add-to-list 'company-c-headers-path-system '"/usr/include/c++/5.4.0")
 (add-to-list 'company-c-headers-path-system '"~/mylib/c-include")
 (add-to-list 'company-c-headers-path-system '"~/mylib/cpp-include")
 
