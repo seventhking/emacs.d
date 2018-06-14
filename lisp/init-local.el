@@ -3,8 +3,6 @@
 
 (require 'wdq-init-common)
 (require 'wdq-init-linum-mode)
-(require 'wdq-init-cc-mode)
-(require 'wdq-init-lua-mode)
 (require 'wdq-init-company)
 (require 'wdq-init-irony)
 (require 'wdq-init-flycheck)
@@ -12,6 +10,9 @@
 (require 'wdq-init-ctags)
 (require 'wdq-init-counsel-gtags)
 (require 'wdq-init-clipboard)
+(require 'wdq-init-cc-mode)
+(require 'wdq-init-lua-mode)
+(require 'wdq-init-python-mode)
 (require 'wdq-init-cmake-mode)
 
 ;; ;;set MELPA to repository list

@@ -13,4 +13,14 @@
 
 ;; (add-hook 'lua-mode-hook 'my-lua-mode-setup)
 
+
+;;company-lua
+(require-package 'company-lua)
+(after-load 'company
+  (add-hook 'lua-mode-hook
+            (lambda () (sanityinc/local-push-company-backend #'(company-lua
+                                                           company-etags
+                                                           company-dabbrev-code)))))
+
+
 (provide 'wdq-init-lua-mode)
