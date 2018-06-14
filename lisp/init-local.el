@@ -17,6 +17,7 @@
 (require 'wdq-init-python-mode)
 (require 'wdq-init-cmake-mode)
 
+
 ;; ;;set MELPA to repository list
 ;; (setq package-archives '(("org" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/org/")
 ;;                          ("popkit" . "https://elpa.popkit.org/packages/")
