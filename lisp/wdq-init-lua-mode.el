@@ -15,7 +15,6 @@
 
 
 ;;company-lua
-(require-package 'company-lua)
 (after-load 'company
   (add-hook 'lua-mode-hook
             (lambda () (sanityinc/local-push-company-backend #'(company-lua

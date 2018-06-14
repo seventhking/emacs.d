@@ -1,8 +1,6 @@
 ;;;[cc-mode]
 
 ;;set google c style
-(require-package 'google-c-style)
-
 (add-hook 'c-mode-common-hook 'google-set-c-style)
 
 ;;open .h file with c++ mode
@@ -10,10 +8,6 @@
 
 ;;company-c-headers
 ;;company-irony
-(require-package 'company-c-headers)
-(require-package 'company-irony)
-(require-package 'company-irony-c-headers)
-
 (after-load 'company
   (add-hook 'c-mode-common-hook
             (lambda () (sanityinc/local-push-company-backend #'company-irony-c-headers)))

@@ -1,10 +1,12 @@
 ;;start package.el with emacs
 (require 'package)
 
+(require 'wdq-init-require-package)
 (require 'wdq-init-common)
 (require 'wdq-init-linum-mode)
 (require 'wdq-init-company)
 (require 'wdq-init-irony)
+(require 'wdq-init-lsp-mode)
 (require 'wdq-init-flycheck)
 (require 'wdq-init-gtags)
 (require 'wdq-init-ctags)
