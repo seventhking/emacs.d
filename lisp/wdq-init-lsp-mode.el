@@ -1,4 +1,6 @@
 (require 'lsp-mode)
+(require 'lsp-imenu)
+(require 'lsp-ui)
 
 (lsp-define-stdio-client
  ;; This can be a symbol of your choosing. It will be used as a the
@@ -22,11 +24,7 @@
 ;; This function will turn lsp-mode on and call the command given to
 ;; start the LSP server.
 (add-hook 'prog-major-mode #'lsp-prog-major-mode-enable)
-
-(require 'lsp-imenu)
 (add-hook 'lsp-after-open-hook 'lsp-enable-imenu)
-
-(require 'lsp-ui)
 (add-hook 'lsp-mode-hook 'lsp-ui-mode)
 
 ;; To enable flycheck-mode for a particular LSP client, add the following
