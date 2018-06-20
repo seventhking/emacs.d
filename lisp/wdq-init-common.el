@@ -17,5 +17,6 @@
 
 (define-coding-system-alias 'UTF-8 'utf-8)
 (setq debug-on-error nil)
+(setq menu-bar-mode t)
 
 (provide 'wdq-init-common)
