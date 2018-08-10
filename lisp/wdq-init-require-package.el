@@ -20,6 +20,7 @@
 (require-package 'lsp-python)
 
 (require-package 'zenburn-theme)
+(require-package 'protobuf-mode)
 
 
 (provide 'wdq-init-require-package)
