@@ -21,6 +21,7 @@
 
 (require-package 'zenburn-theme)
 (require-package 'protobuf-mode)
+(require-package 'flycheck-pyflakes)
 
 
 (provide 'wdq-init-require-package)
