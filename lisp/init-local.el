@@ -17,6 +17,7 @@
 (require 'wdq-init-python-mode)
 (require 'wdq-init-cmake-mode)
 (require 'wdq-init-protobuf-mode)
+(require 'wdq-init-systemtap-mode)
 
 
 ;; ;;set MELPA to repository list

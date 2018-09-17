@@ -8,6 +8,7 @@
 ;; (require-package 'company-lsp)
 
 (require-package 'cmake-mode)
+(require-package 'systemtap-mode)
 
 (require-package 'ggtags)
 (require-package 'counsel-gtags)
