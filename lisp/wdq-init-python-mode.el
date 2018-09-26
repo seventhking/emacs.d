@@ -1,15 +1,15 @@
 ;;anaconda-mode
-(require 'anaconda-mode)
+;; (require 'anaconda-mode)
 ;; (require 'lsp-mode)
 ;; (require 'lsp-python)
 
-(add-hook 'python-mode-hook 'anaconda-mode)
-(add-hook 'python-mode-hook 'anaconda-eldoc-mode)
-(after-load 'company
-  (add-hook 'python-mode-hook
-            (lambda () (sanityinc/local-push-company-backend #'(company-anaconda
-                                                           company-etags
-                                                           company-dabbrev-code)))))
+;; (add-hook 'python-mode-hook 'anaconda-mode)
+;; (add-hook 'python-mode-hook 'anaconda-eldoc-mode)
+;; (after-load 'company
+;;   (add-hook 'python-mode-hook
+;;             (lambda () (sanityinc/local-push-company-backend #'(company-anaconda
+;;                                                            company-etags
+;;                                                            company-dabbrev-code)))))
 
 
 ;; (after-load 'python
