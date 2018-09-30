@@ -1,23 +1,23 @@
 ;;start package.el with emacs
 (require 'package)
 
-(require 'wdq-init-require-package)
-(require 'wdq-init-common)
-(require 'wdq-init-linum-mode)
-(require 'wdq-init-company)
-(require 'wdq-init-irony)
-;; (require 'wdq-init-lsp-mode)
-(require 'wdq-init-flycheck)
-(require 'wdq-init-gtags)
-(require 'wdq-init-ctags)
-(require 'wdq-init-counsel-gtags)
-(require 'wdq-init-clipboard)
-(require 'wdq-init-cc-mode)
-(require 'wdq-init-lua-mode)
-(require 'wdq-init-python-mode)
-(require 'wdq-init-cmake-mode)
-(require 'wdq-init-protobuf-mode)
-(require 'wdq-init-systemtap-mode)
+(require 'self-init-require-package)
+(require 'self-init-common)
+(require 'self-init-linum-mode)
+(require 'self-init-company)
+(require 'self-init-irony)
+;; (require 'self-init-lsp-mode)
+(require 'self-init-flycheck)
+(require 'self-init-gtags)
+(require 'self-init-ctags)
+(require 'self-init-counsel-gtags)
+(require 'self-init-clipboard)
+(require 'self-init-cc-mode)
+(require 'self-init-lua-mode)
+(require 'self-init-python-mode)
+(require 'self-init-cmake-mode)
+(require 'self-init-protobuf-mode)
+(require 'self-init-systemtap-mode)
 
 
 ;; ;;set MELPA to repository list
@@ -46,12 +46,12 @@
 ;; (semantic-add-system-include "~/source-code/linux-4.5.3")
 ;; (semantic-add-system-include "~/mylib/c-include")
 
-;; (require 'wdq-init-gtags)
-;; (require 'wdq-init-ctags)
-;; (require 'wdq-init-cc-mode)
+;; (require 'self-init-gtags)
+;; (require 'self-init-ctags)
+;; (require 'self-init-cc-mode)
 ;;(setq vc-handled-backends ())
 
-;;(require 'wdq-init-input-method)
+;;(require 'self-init-input-method)
 
 ;; (add-hook 'c++-mode-hook (lambda () (setq flycheck-clang-language-standard "c++11")))
 ;;disable mouse
