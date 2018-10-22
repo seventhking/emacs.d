@@ -1,4 +1,18 @@
 ;;anaconda-mode
+;; (defun my-merge-imenu ()
+;;   (interactive)
+;;   (let ((mode-imenu (imenu-default-create-index-function))
+;;         (custom-imenu (imenu--generic-function imenu-generic-expression)))
+;;     (append mode-imenu custom-imenu)))
+
+;; (add-hook 'python-mode-hook
+;;           (lambda ()
+;;             (add-to-list
+;;              'imenu-generic-expression
+;;              '("Sections" "^#### \\[ \\(.*\\) \\]$" 1))
+;;             (imenu-add-to-menubar "Position")
+;;             (setq imenu-create-index-function 'my-merge-imenu)))
+
 ;; (require 'anaconda-mode)
 ;; (require 'lsp-mode)
 ;; (require 'lsp-python)
