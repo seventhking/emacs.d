@@ -18,6 +18,7 @@
 (require 'self-init-cmake-mode)
 (require 'self-init-protobuf-mode)
 (require 'self-init-systemtap-mode)
+(require 'self-init-nginx-mode)
 
 
 ;; ;;set MELPA to repository list

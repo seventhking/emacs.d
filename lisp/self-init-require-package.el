@@ -6,6 +6,7 @@
 (require-package 'company-anaconda)
 (require-package 'company-lua)
 ;; (require-package 'company-lsp)
+(require-package 'company-nginx)
 
 (require-package 'cmake-mode)
 (require-package 'systemtap-mode)
@@ -23,6 +24,7 @@
 (require-package 'zenburn-theme)
 (require-package 'protobuf-mode)
 (require-package 'flycheck-pyflakes)
+(require-package 'nginx-mode)
 
 
 (provide 'self-init-require-package)
