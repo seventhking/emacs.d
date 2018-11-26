@@ -25,6 +25,8 @@
 (require-package 'protobuf-mode)
 (require-package 'flycheck-pyflakes)
 (require-package 'nginx-mode)
+(require-package 'go-mode)
+(require-package 'company-go)
 
 
 (provide 'self-init-require-package)

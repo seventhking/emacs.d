@@ -19,6 +19,7 @@
 (require 'self-init-protobuf-mode)
 (require 'self-init-systemtap-mode)
 (require 'self-init-nginx-mode)
+(require 'self-init-go-mode)
 
 
 ;; ;;set MELPA to repository list
