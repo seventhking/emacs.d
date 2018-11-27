@@ -25,4 +25,6 @@
   (add-hook 'go-mode-hook
             (lambda () (sanityinc/local-push-company-backend #'(company-go)))))
 
+(exec-path-from-shell-copy-env "GOPATH")
+
 (provide 'self-init-go-mode)
