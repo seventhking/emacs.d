@@ -26,5 +26,8 @@
             (lambda () (sanityinc/local-push-company-backend #'(company-go)))))
 
 (exec-path-from-shell-copy-env "GOPATH")
+;; Godef jump key binding
+;; (local-set-key (kbd "M-,") 'godef-jump)
+;; (local-set-key (kbd "M-.") 'pop-tag-mark)
 
 (provide 'self-init-go-mode)
