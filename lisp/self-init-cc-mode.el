@@ -5,6 +5,8 @@
 
 ;;open .h file with c++ mode
 (add-to-list 'auto-mode-alist '("\\.h\\'" . c++-mode))
+(add-to-list 'auto-mode-alist '("\\.cc\\'" . c++-mode))
+(add-to-list 'auto-mode-alist '("\\.hpp\\'" . c++-mode))
 
 ;;company-c-headers
 ;;company-irony
