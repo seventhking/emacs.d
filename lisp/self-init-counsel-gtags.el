@@ -9,5 +9,12 @@
   (define-key counsel-gtags-mode-map (kbd "M-s") 'counsel-gtags-find-symbol)
   (define-key counsel-gtags-mode-map (kbd "M-,") 'counsel-gtags-go-backward))
 
+;; `file-truename' MUST be used!
+(setenv "GTAGSLIBPATH" (concat "/usr/local/include"
+                               ":"
+                               "/usr/include"
+                               ))
+(setenv "MAKEOBJDIRPREFIX" (file-truename "~/gtags-objs/"))
+;; (setq company-backends '((company-dabbrev-code company-gtags)))
 
 (provide 'self-init-counsel-gtags)
