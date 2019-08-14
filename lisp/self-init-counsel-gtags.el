@@ -14,8 +14,8 @@
                                ":"
                                "/usr/include"
                                ))
-;; cd /usr/local/include && MAKEOBJDIRPREFIX=~/obj gtags --objdir
-(setenv "MAKEOBJDIRPREFIX" (file-truename "~/gtags-objs/"))
+;; cd /usr/local/include && MAKEOBJDIRPREFIX=~/gtags-obj gtags --objdir
+(setenv "MAKEOBJDIRPREFIX" (file-truename "~/gtags-obj/"))
 ;; (setq company-backends '((company-dabbrev-code company-gtags)))
 
 (provide 'self-init-counsel-gtags)
