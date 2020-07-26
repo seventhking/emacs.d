@@ -1,13 +1,18 @@
-;; -*- lexical-binding: t -*-
-(setq debug-on-error t)
+;;; init.el --- Load the full configuration -*- lexical-binding: t -*-
+;;; Commentary:
 
-;;; This file bootstraps the configuration, which is divided into
-;;; a number of other files.
+;; This file bootstraps the configuration, which is divided into
+;; a number of other files.
 
-(let ((minver "24.3"))
+;;; Code:
+
+;; Produce backtraces when errors occur: can be helpful to diagnose startup issues
+;;(setq debug-on-error t)
+
+(let ((minver "24.4"))
   (when (version< emacs-version minver)
     (error "Your Emacs is too old -- this config requires v%s or higher" minver)))
-(when (version< emacs-version "24.5")
+(when (version< emacs-version "25.1")
   (message "Your Emacs is old, and some functionality in this config will be disabled. Please upgrade if possible."))
 
 (add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
@@ -44,9 +49,8 @@
 ;; Load configs for specific features and modes
 ;;----------------------------------------------------------------------------
 
-(require-package 'wgrep)
 (require-package 'diminish)
-(require-package 'scratch)
+(maybe-require-package 'scratch)
 (require-package 'command-log-mode)
 
 (require 'init-frame-hooks)
@@ -64,12 +68,10 @@
 (require 'init-recentf)
 (require 'init-smex)
 (require 'init-ivy)
-;;(require 'init-helm)
 (require 'init-hippie-expand)
 (require 'init-company)
 (require 'init-windows)
 (require 'init-sessions)
-(require 'init-fonts)
 (require 'init-mmm)
 
 (require 'init-editing-utils)
@@ -83,7 +85,7 @@
 (require 'init-projectile)
 
 (require 'init-compile)
-;;(require 'init-crontab)
+(require 'init-crontab)
 (require 'init-textile)
 (require 'init-markdown)
 (require 'init-csv)
@@ -103,12 +105,13 @@
 (require 'init-ruby)
 (require 'init-rails)
 (require 'init-sql)
+(require 'init-nim)
 (require 'init-rust)
 (require 'init-toml)
 (require 'init-yaml)
 (require 'init-docker)
 (require 'init-terraform)
-;;(require 'init-nix)
+(require 'init-nix)
 (maybe-require-package 'nginx-mode)
 
 (require 'init-paredit)
@@ -131,27 +134,34 @@
 (require 'init-ledger)
 ;; Extra packages which don't require any configuration
 
+(require-package 'sudo-edit)
 (require-package 'gnuplot)
 (require-package 'lua-mode)
 (require-package 'htmlize)
-(require-package 'dsvn)
 (when *is-a-mac*
   (require-package 'osx-location))
 (unless (eq system-type 'windows-nt)
   (maybe-require-package 'daemons))
 (maybe-require-package 'dotenv-mode)
+(maybe-require-package 'shfmt)
 
 (when (maybe-require-package 'uptimes)
   (setq-default uptimes-keep-count 200)
   (add-hook 'after-init-hook (lambda () (require 'uptimes))))
 
+(when (fboundp 'global-eldoc-mode)
+  (add-hook 'after-init-hook 'global-eldoc-mode))
+
+(require 'init-direnv)
 
 ;;----------------------------------------------------------------------------
 ;; Allow access from emacsclient
 ;;----------------------------------------------------------------------------
-(require 'server)
-(unless (server-running-p)
-  (server-start))
+(add-hook 'after-init-hook
+          (lambda ()
+            (require 'server)
+            (unless (server-running-p)
+              (server-start))))
 
 ;;----------------------------------------------------------------------------
 ;; Variables configured via the interactive 'customize' interface
@@ -179,3 +189,4 @@
 ;; coding: utf-8
 ;; no-byte-compile: t
 ;; End:
+;;; init.el ends here
