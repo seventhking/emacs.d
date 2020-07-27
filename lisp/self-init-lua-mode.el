@@ -15,11 +15,18 @@
 
 
 ;;company-lua
-(after-load 'company
-  (add-hook 'lua-mode-hook
-            (lambda () (sanityinc/local-push-company-backend #'(company-lua
-                                                           company-etags
-                                                           company-dabbrev-code)))))
+(with-eval-after-load 'company
+  (with-eval-after-load 'lua-mode
+    (add-to-list 'company-backends '(company-lua
+                                     company-etags
+                                     company-dabbrev-code))))
+
+
+;; (after-load 'company
+;;   (add-hook 'lua-mode-hook
+;;             (lambda () (sanityinc/local-push-company-backend #'(company-lua
+;;                                                            company-etags
+;;                                                            company-dabbrev-code)))))
 
 
 (provide 'self-init-lua-mode)

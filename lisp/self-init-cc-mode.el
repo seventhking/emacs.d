@@ -10,13 +10,19 @@
 
 ;;company-c-headers
 ;;company-irony
-(after-load 'company
-  (add-hook 'c-mode-common-hook
-            (lambda () (sanityinc/local-push-company-backend #'company-irony-c-headers)))
-  ;; (add-hook 'c-mode-common-hook
-  ;;           (lambda () (sanityinc/local-push-company-backend #'company-c-headers)))
-  (add-hook 'c-mode-common-hook
-            (lambda () (sanityinc/local-push-company-backend #'company-irony))))
+(with-eval-after-load 'company
+  (with-eval-after-load 'cc-mode
+    (add-to-list 'company-backends #'(company-irony
+                                      company-irony-c-headers))))
+
+;; Steve Purcell remove sanityinc/local-push-company-backend function; so configures below is no used;
+;; (after-load 'company
+;;   (add-hook 'c-mode-common-hook
+;;             (lambda () (sanityinc/local-push-company-backend #'company-irony-c-headers)))
+;;   ;; (add-hook 'c-mode-common-hook
+;;   ;;           (lambda () (sanityinc/local-push-company-backend #'company-c-headers)))
+;;   (add-hook 'c-mode-common-hook
+;;             (lambda () (sanityinc/local-push-company-backend #'company-irony))))
 
 ;; (require 'company-c-headers)
 ;; (add-to-list 'company-c-headers-path-system '"/usr/include/c++/7.3.0")

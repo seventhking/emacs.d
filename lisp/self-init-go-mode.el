@@ -1,6 +1,6 @@
-(require 'go-mode)
-(require 'company)
-(require 'company-go)
+;; (require 'go-mode)
+;; (require 'company)
+;; (require 'company-go)
 
 ;; (add-to-list 'load-path "/place/where/you/put/it/")
 ;; (autoload 'go-mode "go-mode" nil t)
@@ -21,9 +21,13 @@
 ;;                           (set (make-local-variable 'company-backends) '(company-go))
 ;;                           (company-mode)))
 
-(after-load 'company
-  (add-hook 'go-mode-hook
-            (lambda () (sanityinc/local-push-company-backend #'(company-go)))))
+(with-eval-after-load 'company
+  (with-eval-after-load 'go-mode
+    (add-to-list 'company-backends '(company-go))))
+
+;; (after-load 'company
+;;   (add-hook 'go-mode-hook
+;;             (lambda () (sanityinc/local-push-company-backend #'(company-go)))))
 
 (exec-path-from-shell-copy-env "GOPATH")
 ;; Godef jump key binding
