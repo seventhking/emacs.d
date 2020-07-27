@@ -3,7 +3,7 @@
 
 (require 'self-init-require-package)
 (require 'self-init-common)
-(require 'self-init-linum-mode)
+;; (require 'self-init-linum-mode)
 (require 'self-init-company)
 (require 'self-init-irony)
 ;; (require 'self-init-lsp-mode)
