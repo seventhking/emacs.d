@@ -2,10 +2,9 @@
 ;;; Commentary:
 ;;; Code:
 
-
-;; See the following note about how I set up python + virtualenv to
-;; work seamlessly with Emacs:
-;; https://gist.github.com/purcell/81f76c50a42eee710dcfc9a14bfc7240
+;; I use nix + direnv instead of virtualenv/pyenv/pyvenv, and it is an
+;; approach which extends to other languages too. I recorded a
+;; screencast about this: https://www.youtube.com/watch?v=TbIHRHy7_JM
 
 
 (setq auto-mode-alist
@@ -23,8 +22,10 @@
     ;; by default we enable it only when working locally.
     (add-hook 'python-mode-hook
               (lambda () (unless (file-remote-p default-directory)
-                      (anaconda-mode 1))))
-    (add-hook 'anaconda-mode-hook 'anaconda-eldoc-mode))
+                           (anaconda-mode 1))))
+    (add-hook 'anaconda-mode-hook
+              (lambda ()
+                (anaconda-eldoc-mode (if anaconda-mode 1 0)))))
   (with-eval-after-load 'anaconda-mode
     (define-key anaconda-mode-map (kbd "M-?") nil))
   (when (maybe-require-package 'company-anaconda)
