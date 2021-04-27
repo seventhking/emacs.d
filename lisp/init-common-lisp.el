@@ -47,5 +47,6 @@
 
 (define-key lisp-mode-map (kbd "C-c l") 'lispdoc)
 
+
 (provide 'init-common-lisp)
 ;;; init-common-lisp.el ends here
