@@ -20,6 +20,7 @@
 (require 'self-init-systemtap-mode)
 (require 'self-init-nginx-mode)
 (require 'self-init-go-mode)
+(require 'self-init-editing-utils)
 
 
 (provide 'init-local)
