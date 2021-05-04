@@ -18,4 +18,10 @@
 (define-coding-system-alias 'UTF-8 'utf-8)
 (setq debug-on-error nil)
 
+(when (maybe-require-package 'moom)
+  (with-eval-after-load "moom"
+    (moom-mode 1)))
+
+
+
 (provide 'self-init-common)
