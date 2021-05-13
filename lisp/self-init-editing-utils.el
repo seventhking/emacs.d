@@ -28,8 +28,15 @@
     (delete-minibuffer-contents)
     (insert (string-trim-right (if (string= directory "~/") (expand-file-name "~/") directory) "[^/]+/?"))))
 
-(define-key minibuffer-local-map (kbd "DEL") #'selectrum-up-directory)
+;; (define-key minibuffer-local-map (kbd "DEL") #'selectrum-up-directory)
 
+
+;; disable key
+;; (transpose-sexps ARG)
+(global-unset-key (kbd "C-M-t"))
+
+;; (end-of-defun &optional ARG)
+(global-unset-key (kbd "C-M-e"))
 
 
 (provide 'self-init-editing-utils)
